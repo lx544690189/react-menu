@@ -3,12 +3,22 @@ import './App.less';
 import ScorpioMenu from './component/Menu';
 
 class App extends React.Component {
+  
   public render() {
     return (
-      <div className="App">
-        <ScorpioMenu/>
+      <div className="app">
+        <div className="demo-1"  onContextMenu={this.onContextMenu} />
+        <div style={{position:'absolute'}}>
+          <ScorpioMenu name="test"/>
+        </div>
       </div>
     );
+  }
+
+  private onContextMenu = (event:any)=>{
+    event.preventDefault();
+    console.log(event.clientX);
+    console.log(event.clientY);
   }
 }
 
