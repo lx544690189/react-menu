@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.less';
-import ScorpioMenu from './component/Menu';
+import ScorpioMenu from './scorpio-menu/index';
 
 class App extends React.Component {
   

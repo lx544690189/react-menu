@@ -1,6 +1,6 @@
 import * as React from 'react';
+import './index.less';
 import { IMenu } from './Interface'
-import './Menu.less';
 class Menu extends React.Component<IMenu, object>  {
 
   constructor(props: IMenu) {
