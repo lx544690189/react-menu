@@ -1,4 +1,29 @@
 .scorpio-menu {
+  &-container {
+    position: absolute;
+    transition: opacity .15s ease-in-out;
+    &.show {
+      display: block;
+      opacity: 1;
+    }
+    &.hide {
+      opacity: 0;
+      left: -9999px;
+      top: -9999px;
+    }
+  }
+  &-submenu-container {
+    position: absolute;
+    left: 100%;
+    top: -4px;
+    margin-left: 5px;
+    transition: opacity .15s ease-in-out;
+    opacity: 1;
+    &.hide{
+      display: none;
+      opacity: 0;
+    }
+  }
   &-list {
     list-style: none;
     outline: none;
@@ -14,17 +39,21 @@
     .scorpio-menu-item {
       position: relative;
       min-width: 80px;
-      padding: 5px 17px 5px 12px;
+      padding: 5px 12px;
       margin: 0;
       font-size: 14px;
       font-weight: normal;
       color: rgba(0, 0, 0, 0.65);
       white-space: nowrap;
       cursor: pointer;
-      transition: all .3s;
+      transition: all .2s;
       line-height: 22px;
-      &:hover {
-        background-color: #e6f7ff;
+      &:hover:not(.disabled) {
+        background-color: #f7f7f7;
+      }
+      &.disabled {
+        color: rgba(0, 0, 0, .25);
+        cursor: not-allowed;
       }
       .scorpio-menu-submenu-icon {
         position: absolute;
@@ -36,12 +65,11 @@
         background-size: 100% 100%;
       }
     }
+    .divider {
+      height: 1px;
+      overflow: hidden;
+      background-color: #e8e8e8;
+      line-height: 0;
+    }
   }
-}
-
-.scorpio-submenu {
-  position: absolute;
-  left: 100%;
-  top: -4px;
-  margin-left: 5px;
 }
