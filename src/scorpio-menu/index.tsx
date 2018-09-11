@@ -3,7 +3,7 @@ import './index.less';
 import { MenuProps } from './Interface'
 class Menu extends React.Component<MenuProps, object>  {
   public state: any = {
-    data: [],
+    menus: {},
   }
   // 当前菜单ref
   private scorpioMenu: HTMLDivElement;
@@ -18,7 +18,6 @@ class Menu extends React.Component<MenuProps, object>  {
     this.state = {
       menus,
     }
-    console.log(this.state.menus);
   }
 
   public resolveMenuData = (menuData: any[]) => {
@@ -52,17 +51,22 @@ class Menu extends React.Component<MenuProps, object>  {
     }
   }
 
-  public onHoverMenuItem = (action: string, item: any, e: React.MouseEvent<HTMLDivElement>) => {
-    console.log('item: ', item);
-    if(action === 'enter'){
+  public onHoverMenuItem = (action: string, item: any, e: React.MouseEvent) => {
+    if (action === 'enter') {
       item.show = true;
     }
-    if(action === 'leave'){
+    if (action === 'leave') {
       item.show = false;
     }
     this.setState({
       menu: this.state.menu,
     })
+  }
+
+  public onClickMenuItem = (item: any, e: React.MouseEvent) => {
+    // 阻止react合成事件的冒泡
+    e.stopPropagation();
+    console.log('item: ', item);
   }
 
   // 渲染菜单项
@@ -77,6 +81,7 @@ class Menu extends React.Component<MenuProps, object>  {
             key={index}
             onMouseEnter={this.onHoverMenuItem.bind(this, 'enter', item)}
             onMouseLeave={this.onHoverMenuItem.bind(this, 'leave', item)}
+            onClick={this.onClickMenuItem.bind(this, item)}
           >
             {item.dataSource.label}
             <div className="scorpio-menu-submenu-icon" />
@@ -94,6 +99,7 @@ class Menu extends React.Component<MenuProps, object>  {
           menuItems.push((
             <li
               className={`scorpio-menu-item ${disabled ? 'disabled' : ''}`}
+              onClick={this.onClickMenuItem.bind(this, item)}
               key={index}
             >
               {item.dataSource.label}
@@ -121,13 +127,13 @@ class Menu extends React.Component<MenuProps, object>  {
     } = this.state;
     // style for .scorpio-menu-container
     const containerStyle = {
+      display: show ? 'block' : 'none',
       left: position.x,
       top: position.y,
     }
-    const containerClass = show ? "scorpio-menu-container show" : "scorpio-menu-container hide";
     return (
       <div
-        className={containerClass}
+        className='scorpio-menu-container'
         style={containerStyle}
         ref={
           ref => {

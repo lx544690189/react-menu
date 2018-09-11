@@ -40,7 +40,6 @@ class App extends React.Component {
   }
 
   private onClose = (e: any) => {
-    console.log(e);
     this.setState({
       show: false,
     })

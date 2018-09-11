@@ -1,27 +1,36 @@
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .scorpio-menu {
+  z-index: 20180910;
   &-container {
     position: absolute;
-    transition: opacity .15s ease-in-out;
+    animation: fadein ease-in-out 150ms;
+    animation-fill-mode: forwards;
     &.show {
       display: block;
-      opacity: 1;
     }
     &.hide {
-      opacity: 0;
-      left: -9999px;
-      top: -9999px;
+      display: none;
     }
   }
   &-submenu-container {
     position: absolute;
     left: 100%;
-    top: -4px;
+    top: 0;
     margin-left: 5px;
-    transition: opacity .15s ease-in-out;
-    opacity: 1;
+    animation: fadein ease-in-out 150ms;
+    animation-fill-mode: forwards;
     &.hide{
       display: none;
-      opacity: 0;
+    }
+    &.show{
+      display: block;
     }
   }
   &-list {
@@ -48,6 +57,15 @@
       cursor: pointer;
       transition: all .2s;
       line-height: 22px;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 5px;
+        height: 100%;
+        cursor: default;
+      }
       &:hover:not(.disabled) {
         background-color: #f7f7f7;
       }
