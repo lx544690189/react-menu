@@ -1,5 +1,5 @@
 {
-  "name": "react-menu",
+  "name": "scorpio-menu",
   "version": "0.0.1",
   "description": "react右键菜单",
   "main": "dist/scorpio-menu.js",
@@ -10,7 +10,8 @@
     "菜单"
   ],
   "scripts": {
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "build-docs": "cd demo && npm run build"
   },
   "author": "lixin <lixin544@163.com>",
   "license": "ISC",
