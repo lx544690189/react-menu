@@ -1,6 +1,6 @@
 {
   "name": "scorpio-menu",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "react右键菜单",
   "main": "dist/scorpio-menu.js",
   "keywords": [
