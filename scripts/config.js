@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -6,8 +7,7 @@ module.exports = {
     filename: "scorpio-menu.js",
     path: path.resolve(__dirname, '../dist'),
     library: 'scorpioMenu',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    libraryTarget: 'commonjs2',
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -46,12 +46,5 @@ module.exports = {
     ]
   },
 
-  // When importing a module whose path matches one of the following, just
-  // assume a corresponding global variable exists and use that instead.
-  // This is important because it allows us to avoid bundling all of our
-  // dependencies, which allows browsers to cache those libraries between builds.
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  },
+  externals: [nodeExternals()],
 };

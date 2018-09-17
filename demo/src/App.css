@@ -1,0 +1,51 @@
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eeeeee;
+}
+
+html {
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+section {
+  width: 1100px;
+  margin: 20px auto;
+}
+
+h1 {
+  color: #686c6e;
+}
+
+code {
+  font-family: 'Inconsolata', Monaco, Consolas, 'Andale Mono', monospace;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  background: #f5f2f0;
+  padding: 15px 20px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #409eff;
+}
+
+.demo{
+  position: relative;
+  height: 200px;
+  background: #fff;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  line-height: 200px;
+  font-size: 40px;
+  color: rgba(51, 51, 51, 0.42);
+  text-align: center;
+  user-select: none;
+}
