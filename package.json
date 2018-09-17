@@ -1,6 +1,6 @@
 {
   "name": "scorpio-menu",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "react右键菜单",
   "main": "dist/scorpio-menu.js",
   "keywords": [
@@ -16,7 +16,8 @@
   "author": "lixin <lixin544@163.com>",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.4.2"
+    "react": "^16.4.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
