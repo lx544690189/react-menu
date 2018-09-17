@@ -1,28 +1,51 @@
-.App {
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eeeeee;
+}
+
+html {
+  height: 100vh;
+}
+
+header {
   text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+section {
+  width: 1100px;
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1 {
+  color: #686c6e;
 }
 
-.App-title {
-  font-size: 1.5em;
+code {
+  font-family: 'Inconsolata', Monaco, Consolas, 'Andale Mono', monospace;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  background: #f5f2f0;
+  padding: 15px 20px;
+  display: block;
 }
 
-.App-intro {
-  font-size: large;
+a {
+  text-decoration: none;
+  color: #409eff;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.demo{
+  position: relative;
+  height: 200px;
+  background: #fff;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  line-height: 200px;
+  font-size: 40px;
+  color: rgba(51, 51, 51, 0.42);
+  text-align: center;
+  user-select: none;
 }

@@ -27,6 +27,8 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "monaco-editor": "^0.14.3",
+    "monaco-editor-webpack-plugin": "^1.5.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -35,7 +37,9 @@
     "react": "^16.5.1",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.1",
+    "react-tiny-autosuggest": "^1.0.1",
     "resolve": "1.6.0",
+    "scorpio-menu": "0.0.3",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
@@ -46,8 +50,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "build": "node scripts/build.js"
   },
   "jest": {
     "collectCoverageFrom": [
