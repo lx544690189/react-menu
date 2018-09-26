@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "react右键菜单",
   "main": "dist/scorpio-menu.js",
+  "types": "src/Interface.d.ts",
   "keywords": [
     "react",
     "contextMenu",
@@ -11,7 +12,10 @@
   ],
   "scripts": {
     "build": "node scripts/build.js",
-    "build-docs": "cd demo && npm run build"
+    "build-docs": "cd demo && npm run build",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major"
   },
   "author": "lixin <lixin544@163.com>",
   "license": "ISC",

@@ -1,4 +1,7 @@
-export interface MenuProps {
+/**
+ * menu组件
+ */
+export declare interface MenuProps {
   data: object[];
   position?: {
     x: number,
@@ -9,7 +12,10 @@ export interface MenuProps {
   onMenuClick?: (e: any) => void;
 }
 
-export interface MenuItemProps {
+/**
+ * 封装的menuItem数据
+ */
+export declare interface MenuItemProps {
   dataSource: object,
   show: boolean,
   subMenu: MenuItemProps[]
